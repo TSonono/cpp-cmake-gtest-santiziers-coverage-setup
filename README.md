@@ -1,4 +1,4 @@
-# A cross-platform CMake C++ setup with streamlined sanitizer and coverage integration
+# A cross-platform CMake C++ setup with streamlined sanitizer, coverage and gtest integration
 
 ## Introduction
 
@@ -7,7 +7,7 @@ The purpose of the repository is to show one approach of setting up a C/C++ proj
 ## Requirements
 
 - Linux (tested on ubuntu)
-- A C++ compiler
+- A C++ compiler (clang for MSAN compatibility)
 - CMake
 - gcov and lcov
 
@@ -49,3 +49,5 @@ Note, you can't use all sanitizers at the same time. Same restrictions apply as 
 
 To build the project after running the CMake script, one would simply run the command `make` in the `build/` directory. To run the test(s), 
 one would run the command `ctest`. If a test fails, one can run a individual test like so `./tests/binary_search_test`. This would provide the output from the test and potentially the sanitizers if they find an error.
+
+To get the coverage report of the unit tests (given that the -DWITH_COVERAGE=On was called with the cmake command), run `make coverage`. The coverage report ends up in `build/coverage/index.html`.

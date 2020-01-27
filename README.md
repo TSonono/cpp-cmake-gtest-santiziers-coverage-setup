@@ -45,6 +45,14 @@ cmake -DCMAKE_BUILD_TYPE=Debug -DSANITIZE_ADDRESS=On -DBUILD_TESTS=ON -DWITH_COV
 
 Note, you can't use all sanitizers at the same time. Same restrictions apply as compiling and linking with the sanitizers manually (without this setup).
 
+### Static Analysis
+
+### Requirements
+- scan-build
+- cppcheck
+
+To run the static analysis, simply run `./scan.sh`
+
 ### Run
 
 To build the project after running the CMake script, one would simply run the command `make` in the `build/` directory. To run the test(s), 

@@ -51,7 +51,7 @@ Note, you can't use all sanitizers at the same time. Same restrictions apply as 
 - scan-build
 - cppcheck
 
-To run the static analysis, simply run `./scan.sh`
+To run the static analysis, simply run `./static-analyzing.sh`
 
 ### Run
 

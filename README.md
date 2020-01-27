@@ -50,6 +50,7 @@ Note, you can't use all sanitizers at the same time. Same restrictions apply as 
 ### Requirements
 - scan-build
 - cppcheck
+- clang-tidy
 
 To run the static analysis, simply run `./static-analyzing.sh`
 

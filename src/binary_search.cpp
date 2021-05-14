@@ -21,10 +21,10 @@
 using namespace std;
 
 int binarySearch(vector<int> array, int target) {
-  
+
 	int low = 0;
 	int high = array.size() - 1;
-	
+
 	while (low <= high)
 	{
 		if (array[floor((low + high) / 2)] < target)

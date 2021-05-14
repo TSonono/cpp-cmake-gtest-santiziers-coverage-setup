@@ -4,3 +4,6 @@
 [submodule "tests/googletest"]
 	path = tests/googletest
 	url = https://github.com/google/googletest.git
+[submodule "cmake/cmake-modules"]
+	path = cmake/cmake-modules
+	url = https://github.com/bilke/cmake-modules.git

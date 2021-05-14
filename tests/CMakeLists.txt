@@ -1,13 +1,12 @@
 add_subdirectory(googletest)
-set(COVERAGE_LCOV_EXCLUDES '${CMAKE_SOURCE_DIR}/tests/*' '/usr/include/*')
-
 
 add_gtest_test(binary_search_test binary_search_test.cpp)
-target_link_libraries(binary_search_test binary_search)
+target_link_libraries(binary_search_test gtest_main binary_search)
 target_include_directories(binary_search_test PRIVATE ../include)
 
-
-SETUP_TARGET_FOR_COVERAGE_LCOV(
-    NAME coverage
-    EXECUTABLE ctest
-)
+if(WITH_COVERAGE)
+    setup_target_for_coverage_lcov(
+                NAME coverage
+                EXECUTABLE ctest
+                EXCLUDE "/usr/include/*" "${CMAKE_SOURCE_DIR}/tests/*")
+endif(WITH_COVERAGE)

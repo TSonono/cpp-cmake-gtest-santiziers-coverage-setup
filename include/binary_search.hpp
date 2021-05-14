@@ -1,5 +1,5 @@
-#ifndef _binary_search_H_
-#define _binary_search_H_
+#ifndef binary_search_H
+#define binary_search_H
 
 /**
 * @file binary_search.hpp
@@ -20,7 +20,7 @@ using namespace std;
 /*======= Public variable declarations ======================================*/
 /*======= Public function declarations ======================================*/
 
-int binarySearch(vector<int> array, int target);
+int binarySearch(vector<int> &array, int target);
 
 
-#endif /* _binary_search_H_ */
+#endif /* binary_search_H */

@@ -8,7 +8,7 @@
 /*======= Includes ==========================================================*/
 
 #include <vector>
-#include <math.h>
+#include <cmath>
 #include "binary_search.hpp"
 
 /*======= Local Macro Definitions ===========================================*/
@@ -20,20 +20,20 @@
 
 using namespace std;
 
-int binarySearch(vector<int> array, int target) {
+int binarySearch(vector<int> &array, int target) {
 
 	int low = 0;
-	int high = array.size() - 1;
+	int high = (int)array.size() - 1;
 
 	while (low <= high)
 	{
-		if (array[floor((low + high) / 2)] < target)
+		if (array[(int)floor((low + high) / 2)] < target)
 		{
-			low = floor((low + high) / 2) + 1;
+			low = (int)floor((low + high) / 2) + 1;
 		}
 		else if (array[floor((low + high) / 2)] > target)
 		{
-			high = floor((low + high) / 2) - 1;
+			high = (int)floor((low + high) / 2) - 1;
 		}
 		else
 		{
@@ -42,4 +42,3 @@ int binarySearch(vector<int> array, int target) {
 	}
 	return -1;
 }
-

@@ -1,0 +1,16 @@
+{
+    "cmake.generator": "Ninja",
+    "cmake.configureOnOpen": true,
+    "cmake.parallelJobs": 0,
+    "cmake.configureArgs": [
+        "-DSANITIZE_ADDRESS=On",
+        "-DBUILD_TESTS=On",
+        "-DWITH_COVERAGE=On"
+    ],
+    "clangd.onConfigChanged": "restart",
+    "clangd.arguments": [
+            "--clang-tidy",
+            "--compile-commands-dir=/home/tofik/playground/cpp-cmake-gtest-santiziers-coverage-setup/build",
+     ],
+     "C_Cpp.intelliSenseEngine": "Disabled",
+}

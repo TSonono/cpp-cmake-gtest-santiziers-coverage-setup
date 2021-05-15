@@ -8,5 +8,5 @@ if(WITH_COVERAGE)
     setup_target_for_coverage_lcov(
                 NAME coverage
                 EXECUTABLE ctest
-                EXCLUDE "/usr/include/*" "${CMAKE_SOURCE_DIR}/tests/*")
+                EXCLUDE "/usr/include/*" "${CMAKE_SOURCE_DIR}/tests/googletest/*")
 endif(WITH_COVERAGE)

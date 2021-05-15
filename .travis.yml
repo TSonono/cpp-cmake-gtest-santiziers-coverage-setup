@@ -1,0 +1,31 @@
+language: cpp
+dist: focal
+compiler:
+  - clang
+os:
+  - linux
+
+env:
+  -CODECOV_TOKEN='3ace8d12-b832-4f34-92fa-be6e30eb438e'
+
+addons:
+  apt:
+    packages:
+    - cmake
+    - lcov
+    - gcovr
+    - llvm-10
+    - cppcheck
+
+before_script:
+- mkdir -p build && cd build
+- cmake .. -DCMAKE_BUILD_TYPE=$BUILD_TYPE
+    -DSANITIZE_ADDRESS=On -DBUILD_TESTS=On
+    -DWITH_COVERAGE=On
+- cmake --build .
+- cd ..
+
+script:
+  - cd build && make test && make coverage
+  - bash <(curl -s https://codecov.io/bash) -f coverage.info || echo "Codecov did not collect coverage reports"
+  - cd .. && ./static-analyzing.sh

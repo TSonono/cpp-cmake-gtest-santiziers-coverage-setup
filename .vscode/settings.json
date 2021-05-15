@@ -5,7 +5,7 @@
     "cmake.configureArgs": [
         "-DSANITIZE_ADDRESS=On",
         "-DBUILD_TESTS=On",
-        "-DWITH_COVERAGE=On"
+        "-DWITH_COVERAGE=Off"
     ],
     "clangd.onConfigChanged": "restart",
     "clangd.arguments": [

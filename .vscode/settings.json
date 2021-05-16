@@ -1,5 +1,5 @@
 {
-    "cmake.generator": "Unix Makefiles",
+    "cmake.generator": "Ninja",
     "cmake.configureOnOpen": true,
     "cmake.parallelJobs": 0,
     "cmake.configureArgs": [

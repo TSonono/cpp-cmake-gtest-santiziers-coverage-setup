@@ -1,4 +1,4 @@
-add_library(binary_search binary_search.cpp)
-target_include_directories(binary_search PRIVATE ../include)
-add_sanitizers(binary_search)
-target_compile_options(binary_search PRIVATE -Wall -Wextra -Werror -Wpedantic -Wshadow -Wcast-qual)
+# add_library(TARGET_NAME SROUCE_FILE.cpp)
+# target_include_directories(TARGET_NAME PRIVATE ../include)
+# add_sanitizers(TARGET_NAME)
+# target_compile_options(TARGET_NAME PRIVATE -Wall -Wextra -Werror -Wpedantic -Wshadow -Wcast-qual)
